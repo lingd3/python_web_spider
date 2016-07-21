@@ -1,0 +1,23 @@
+# coding:UTF8
+import urllib2
+
+# url下载器
+
+class HtmlDownloader(object):
+    
+    
+    def download(self, url):
+        if url is None:
+            return None
+        
+        response = urllib2.urlopen(url)
+        
+        if response.code != 200:
+            return None
+        
+        return response.read()
+    
+    
+
+
+
